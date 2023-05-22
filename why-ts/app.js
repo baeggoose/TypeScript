@@ -19,7 +19,7 @@ function startApp() {
       console.log(user);
       username.innerText = user[0].name;
       email.innerText = user[0].email;
-      address.innerText = user[0].addr;
+      address.innerText = user[0].address.street;
     })
     .catch(function (error) {
       console.log(error);
