@@ -10,6 +10,12 @@ var address = document.querySelector("#address");
 var user = {};
 
 /**
+ * @typedef {object} User
+ * @property {string} name
+ * @property {string} email
+ * @property {object} address
+ */
+/**
  * @returns {Promise<User>}
  */
 function fetchUser() {
