@@ -9,13 +9,18 @@ var address = document.querySelector("#address");
 // user data
 var user = {};
 
+/**
+ * @returns {Promise<User>}
+ */
 function fetchUser() {
   return axios.get(url);
 }
+console.log(fetchUser());
 
 function startApp() {
-  axios
-    .get(url)
+  // axios
+  //   .get(url)
+  fetchUser()
     .then(function (response) {
       // console.log(response);
       user = response.data;
