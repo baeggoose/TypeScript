@@ -13,3 +13,13 @@ let items: number[] = [1, 2, 3];
 
 // TS 튜플
 let address: [string, number] = ["gangnam", 100];
+// TS 객체
+let obj: object = {};
+let person: object = {
+  name: "baeggoose",
+  age: 100,
+};
+let person2: { name: string; age: number } = {
+  name: "goose",
+  age: 1000,
+};
