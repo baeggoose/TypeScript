@@ -23,3 +23,5 @@ let person2: { name: string; age: number } = {
   name: "goose",
   age: 1000,
 };
+// TS 진위값
+let show: boolean = true;
