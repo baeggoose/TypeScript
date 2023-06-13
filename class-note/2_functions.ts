@@ -13,3 +13,4 @@ function add(): number {
 function plus(a: number, b: number): number {
   return a + b;
 }
+plus(10, 20, 30, 40);
