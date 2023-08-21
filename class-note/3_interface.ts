@@ -49,7 +49,7 @@ var obj: StringRegexDictionary = {
 
 Object.keys(obj).forEach(function (value) {});
 
-// 인터페이스 확장
+// 인터페이스 확장(상속)
 interface Person {
   age: number;
   name: string;
