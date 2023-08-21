@@ -48,3 +48,19 @@ var obj: StringRegexDictionary = {
 };
 
 Object.keys(obj).forEach(function (value) {});
+
+// 인터페이스 확장
+interface Person {
+  age: number;
+  name: string;
+}
+
+interface Developer extends Person {
+  lauguage: string;
+}
+
+var baeg: Developer = {
+  lauguage: "ts",
+  name: "구스",
+  age: 100,
+};
