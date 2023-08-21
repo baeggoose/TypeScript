@@ -17,5 +17,14 @@ const goose = {
   name: "구스",
   age: 100,
 };
-
 getUser(goose);
+
+// 함수의 스펙(구조)에 활용한 인터페이스
+interface SumFunction {
+  (a: number, b: number): number;
+}
+
+var sum: SumFunction;
+sum = function (a: number, b: number): number {
+  return a + b;
+};
