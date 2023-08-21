@@ -1,12 +1,12 @@
-// interface human {
-//   name: string;
-//   age: number;
-// }
-
-type human = {
+interface human {
   name: string;
   age: number;
-};
+}
+
+// type human = {
+//   name: string;
+//   age: number;
+// };
 
 var baeggoose: human = {
   name: "구스",
