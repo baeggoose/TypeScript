@@ -55,17 +55,19 @@ function fetchContacts(): Promise<Contact[]> {
 
 // main
 class AddressBook {
-  // TODO: 아래 변수의 타입을 지정해보세요.
+  // 변수 타입 지정
   contacts: Contact[] = [];
 
+  // constructor 는 타입 지정 안해도 됨
   constructor() {
     this.fetchData();
   }
 
-  fetchData() {
+  fetchData(): void {
     fetchContacts().then((response) => {
       this.contacts = response;
     });
+    // return 반환값 없는 void 지정
   }
 
   /* TODO: 아래 함수들의 파라미터 타입과 반환 타입을 지정해보세요 */
