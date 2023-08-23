@@ -32,3 +32,6 @@ var shoppingItem: DetailedDropdown<number> = {
   value: 22,
   tag: 1,
 };
+
+// Best Common Type
+var arr = [1, 2, true, true, "a"];
