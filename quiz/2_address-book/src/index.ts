@@ -10,14 +10,13 @@ interface Contact {
   phones: PhoneNumberDictionary;
 }
 
-// api
-// TODO: 아래 함수의 반환 타입을 지정해보세요.
-function fetchContacts() {
-  // TODO: 아래 변수의 타입을 지정해보세요.
-  const contacts = [
+// api 함수 반환 타입 지정
+function fetchContacts(): Promise<Contact[]> {
+  // 변수 타입 지정
+  const contacts: Contact[] = [
     {
-      name: 'Tony',
-      address: 'Malibu',
+      name: "Tony",
+      address: "Malibu",
       phones: {
         home: {
           num: 11122223333,
@@ -28,8 +27,8 @@ function fetchContacts() {
       },
     },
     {
-      name: 'Banner',
-      address: 'New York',
+      name: "Banner",
+      address: "New York",
       phones: {
         home: {
           num: 77788889999,
@@ -37,8 +36,8 @@ function fetchContacts() {
       },
     },
     {
-      name: '마동석',
-      address: '서울시 강남구',
+      name: "마동석",
+      address: "서울시 강남구",
       phones: {
         home: {
           num: 213423452,
@@ -49,7 +48,7 @@ function fetchContacts() {
       },
     },
   ];
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => resolve(contacts), 2000);
   });
 }
@@ -57,30 +56,30 @@ function fetchContacts() {
 // main
 class AddressBook {
   // TODO: 아래 변수의 타입을 지정해보세요.
-  contacts = [];
+  contacts: Contact[] = [];
 
   constructor() {
     this.fetchData();
   }
 
   fetchData() {
-    fetchContacts().then(response => {
+    fetchContacts().then((response) => {
       this.contacts = response;
     });
   }
 
   /* TODO: 아래 함수들의 파라미터 타입과 반환 타입을 지정해보세요 */
   findContactByName(name) {
-    return this.contacts.filter(contact => contact.name === name);
+    return this.contacts.filter((contact) => contact.name === name);
   }
 
   findContactByAddress(address) {
-    return this.contacts.filter(contact => contact.address === address);
+    return this.contacts.filter((contact) => contact.address === address);
   }
 
   findContactByPhone(phoneNumber, phoneType: string) {
     return this.contacts.filter(
-      contact => contact.phones[phoneType].num === phoneNumber
+      (contact) => contact.phones[phoneType].num === phoneNumber
     );
   }
 
@@ -89,11 +88,11 @@ class AddressBook {
   }
 
   displayListByName() {
-    return this.contacts.map(contact => contact.name);
+    return this.contacts.map((contact) => contact.name);
   }
 
   displayListByAddress() {
-    return this.contacts.map(contact => contact.address);
+    return this.contacts.map((contact) => contact.address);
   }
   /* ------------------------------------------------ */
 }
