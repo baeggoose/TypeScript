@@ -6,12 +6,29 @@ function get1B(b = 10) {
   return b + c;
 }
 
-// 타입 추론 기본 1
+// 타입 추론 기본 2
+// interface Dropdown<T> {
+//   value: T;
+//   title: string;
+// }
+// var shoppingItem: Dropdown<string> = {
+//   value: "abs",
+//   title: "shop",
+// };
+
+// 타입 추론 기본 3
 interface Dropdown<T> {
   value: T;
   title: string;
 }
-var shoppingItem: Dropdown<string> = {
-  value: "abs",
+interface DetailedDropdown<K> extends Dropdown<K> {
+  tag: K;
+  description: string;
+}
+
+var shoppingItem: DetailedDropdown<number> = {
   title: "shop",
+  description: "blah",
+  value: 22,
+  tag: 1,
 };
