@@ -1,20 +1,4 @@
-interface PhoneNumberDictionary {
-  [phone: string]: {
-    num: number;
-  };
-}
-
-interface Contact {
-  name: string;
-  address: string;
-  phones: PhoneNumberDictionary;
-}
-
-enum PhoneType {
-  Home = "home",
-  Office = "office",
-  Studio = "studio",
-}
+import { Contact, PhoneType } from "./types";
 
 // api 함수 반환 타입 지정
 function fetchContacts(): Promise<Contact[]> {
